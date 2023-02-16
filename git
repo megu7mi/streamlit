@@ -1,7 +1,15 @@
 $git config --global user.name "megu7mi"
 $git config --global user.email "mnakata77@yahoo.co.jp"
 $git config --global --list
+
+ここからGithubに例あり
 $git init
 $git add -A
 $git status
 $git commit -m "first commit"
+# org は、なんだろう　original では失敗した。
+$git remote add org https://github.com/megu7mi/streamlit.git  
+$git push -u org main
+
+git statusでbranchが, main 以外の場合、
+$git branch -m main
