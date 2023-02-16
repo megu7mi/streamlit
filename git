@@ -1,3 +1,7 @@
 $git config --global user.name "megu7mi"
 $git config --global user.email "mnakata77@yahoo.co.jp"
 $git config --global --list
+$git init
+$git add -A
+$git status
+$git commit -m "first commit"
