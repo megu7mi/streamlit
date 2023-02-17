@@ -14,6 +14,7 @@ $git push -u org main
 #git statusでbranchが, main 以外の場合、
 $git branch -m main
 
+#masa-dev ブランチを作る
 ブランチの一覧を見る
 $git branch -a 
 ブランチを作る元のブランチに切り替える
@@ -23,13 +24,23 @@ $git checkout -b masa-dev
 ブランチの一覧を見る
 git branch -a 
 git push -u org masa-dev
+#ブランチをリモートにpush
+$git push -u org masa-dev 
 
-
-
+#mainのコードや、メモを修正して、githubのmainに反映したい場合はどうするのだろう。
 #リモート（github)をアップデートするにはどうする？
 mainは、ローカルとリモート同じにしておく。mainは、リリース版だから。
 自分の開発は、feature branch などで行い、バックアップとして、githubにpushしておく。
 feature branchが完了した場合、pushして、github上でpull requestからマージする。
 （コンフリクトがない場合）
 
-#mainのコードや、メモを修正して、githubのmainに反映したい場合はどうするのだろう。
+---> Notesに"初心者向け！GitHubでチーム開発するための基本操作を解説！by サプーyoutube 
+の図がある。参考！
+
+#ブランチを削除する
+web ボタンでpull request後に
+local $git checkout main などに切り替えて
+$git branch -d masa-dev
+リモートと情報同期
+$git fetch -p
+$git branch -a
