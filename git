@@ -1,7 +1,35 @@
 $git config --global user.name "megu7mi"
 $git config --global user.email "mnakata77@yahoo.co.jp"
 $git config --global --list
+
+ここからGithubに例あり
 $git init
 $git add -A
 $git status
 $git commit -m "first commit"
+# org は、なんだろう　original では失敗した。
+$git remote add org https://github.com/megu7mi/streamlit.git  
+$git push -u org main
+
+#git statusでbranchが, main 以外の場合、
+$git branch -m main
+
+ブランチの一覧を見る
+$git branch -a 
+ブランチを作る元のブランチに切り替える
+$git checkout main
+ブランチを作成
+$git checkout -b masa-dev
+ブランチの一覧を見る
+git branch -a 
+git push -u org masa-dev
+
+
+
+#リモート（github)をアップデートするにはどうする？
+mainは、ローカルとリモート同じにしておく。mainは、リリース版だから。
+自分の開発は、feature branch などで行い、バックアップとして、githubにpushしておく。
+feature branchが完了した場合、pushして、github上でpull requestからマージする。
+（コンフリクトがない場合）
+
+#mainのコードや、メモを修正して、githubのmainに反映したい場合はどうするのだろう。
